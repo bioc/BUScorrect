@@ -7,4 +7,8 @@
     }
 }
 
-
+\section{Changes in version 0.99.13 (2018-10-09)}{
+    \itemize{
+       \item Improved the ``postprob\_DE\_thr\_fun'' function.
+    }
+}
