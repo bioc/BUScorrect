@@ -632,13 +632,19 @@ postprob_DE_thr_fun <- function(BUSfits, fdr_threshold=0.1){
 		}
 	}
 	ind <- which(kappa_fdr_matr[ ,2] <= fdr_threshold)
-	ind2 <- which.max(kappa_fdr_matr[ind,2])
-	ind3 <- ind[ind2] # the index that has the maximum fdr
+        if(length(ind)==0){
+                warning(c("The false discovery rate cannot be controlled less than ", fdr_threshold, ".\n Please try a larger fdr threshold. \n")) 
+
+        }else{
+
+		ind2 <- which.max(kappa_fdr_matr[ind,2])
+		ind3 <- ind[ind2] # the index that has the maximum fdr
                       # but less than fdr_threshold
-	message(c("Posterior probability threshold = ",
-          1-as.numeric(kappa_fdr_matr[ind3,1]),"\n"))
-	message("The output is a scalar.\n")
-	return(1-as.numeric(kappa_fdr_matr[ind3,1])) #1-kappa
+		message(c("Posterior probability threshold = ",
+          		1-as.numeric(kappa_fdr_matr[ind3,1]),"\n"))
+		message("The output is a scalar.\n")
+		return(1-as.numeric(kappa_fdr_matr[ind3,1])) #1-kappa
+        }
 }
 
 #Estimate intrinsic gene indicators
