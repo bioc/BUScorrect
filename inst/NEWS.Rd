@@ -12,3 +12,9 @@
        \item Improved the ``postprob\_DE\_thr\_fun'' function.
     }
 }
+
+\section{Changes in version 1.2.0 (2019-06-14)}{
+	\itemize{
+           \item Updated the citation information as the paper has been published.
+	}
+}
