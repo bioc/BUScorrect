@@ -1,12 +1,12 @@
-year <- 2018
-note <- "Journal of the American Statistical Association. In press."
+year <- 2019
+note <- "Journal of the American Statistical Association, 114:526, 581-594."
 
 bibentry(bibtype = "Manual",
-         title = "Batch effects correction with unknown subtypes",
+         title = "Batch Effects Correction with Unknown Subtypes",
          author = c(person("Xiangyu", "Luo"),
                     person("Yingying", "Wei")),
          year = year,
          note = note,
-         textVersion = "Xiangyu Luo, Yingying Wei. Batch effects correction with unknown subtypes. Journal of the American Statistical Association. 2018. In press.")
+         textVersion = "Xiangyu Luo & Yingying Wei (2019) Batch Effects Correction with Unknown Subtypes, Journal of the American Statistical Association, 114:526, 581-594.")
 
 
